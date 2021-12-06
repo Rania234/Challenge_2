@@ -2,25 +2,22 @@
 import './App.css';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Login from './components/Login';
+import Hello from "./components/hello/Hello"
 
 function App() {
   return (
     <div className="App">
        <Router>
-       <Switch>
+      
        <Route exact path="/">
-              {/* <Home /> */}
+             <Hello value="welcome" />
             </Route>
             <Route exact path="/login">
               <Login />
             </Route>
 
 
-       </Switch>
+     
        </Router>
       
-    </div>
-  );
-}
-
-export default App;
+</div>)} export default App
