@@ -1,22 +1,23 @@
-import Menu from './Components/menu/Menu'
-import Hello from './Components/hello/Hello'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom"
+
+import './App.css';
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import Login from './components/Login';
+import Hello from "./components/hello/Hello"
 
 function App() {
   return (
-    <div className="app">
-     
-        <Router>
+    <div className="App">
+       <Router>
       
-              <Hello value="Welcome to my web site" />
-            </Router>
-    </div>
-  )
-}
+       <Route exact path="/">
+             <Hello value="welcome" />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
 
-export default App
+
+     
+       </Router>
+      
+</div>)} export default App
